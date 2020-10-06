@@ -9,16 +9,20 @@ public class Boss
 
         public void Magic()
         {
-                mp -= 5;    
-        
-                Debug.Log( "魔法攻撃をした。残りMPは"+ mp + "。" );
+
+             if(mp >= 5)
+             {
+             mp -= 5;
+             Debug.Log( "魔法攻撃をした。残りMPは"+ mp + "。" );
+
+             }
                 
-                if(mp < 5)
-                {
+              else if(mp < 5)
+             {
 
-                Debug.Log("MPが足りないため魔法が使えない。");
+             Debug.Log("MPが足りないため魔法が使えない。");
 
-                }
+             }
         }
 
 }
